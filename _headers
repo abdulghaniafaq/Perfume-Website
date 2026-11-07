@@ -1,0 +1,4 @@
+# WORK IN PROGRESS: asks search engines not to list this site.
+# DELETE THIS FILE (or these two lines) when you go live.
+/*
+  X-Robots-Tag: noindex, nofollow
