@@ -1,0 +1,293 @@
+/* ==========================================================================
+   Catalogue page — filters, product cards, pager, "Find my scent" quiz, photo viewer
+   (loaded after site.css, on catalogue.html only)
+   ========================================================================== */
+
+/* ---------- Filters: search + Filters button, style tabs, results line ---------- */
+.controls { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; margin-bottom: 28px; }
+.ctl-bar { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 10px; align-items: stretch; }
+
+.search { position: relative; display: block; }
+.search svg { position: absolute; left: 16px; top: 50%; translate: 0 -50%; width: 18px; height: 18px; color: var(--muted); pointer-events: none; }
+.search input { width: 100%; padding: 14px 16px 14px 46px; border-radius: 999px; border: 1px solid var(--field-line); background: var(--surface); transition: border-color .2s; }
+.search input:not(:placeholder-shown) { padding-right: 52px; }   /* room for the × once there is something to clear */
+.search input::placeholder { color: var(--muted); }
+.search input:focus { border-color: var(--gold); }
+.search input::-webkit-search-cancel-button { display: none; }   /* we draw our own × (it also works in Firefox) */
+.search-x { position: absolute; right: 9px; top: 50%; translate: 0 -50%; width: 32px; height: 32px; border: 0; border-radius: 50%; background: var(--tint); color: var(--muted); font-size: 1.2rem; line-height: 1; }
+.search-x:hover { color: var(--text); }
+.search-x[hidden] { display: none; }
+
+/* perfume names offered while typing, directly under the search box */
+.search-wrap { position: relative; min-width: 0; }
+.suggest { position: absolute; z-index: 40; top: calc(100% + 6px); left: 0; right: 0; padding: 6px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); box-shadow: var(--shadow); }
+.suggest[hidden], .suggest [hidden] { display: none; }
+/* the LIST is what scrolls (it is the combobox's listbox: keyboard users move through it with the arrow keys from the search box) */
+.suggest ul { list-style: none; margin: 0; padding: 0; max-height: calc(min(26rem, 55vh) - 14px); max-height: calc(min(26rem, 55dvh) - 14px); overflow-y: auto; overscroll-behavior: contain; }
+.suggest li { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 44px; padding: 8px 14px; border-radius: 14px; cursor: pointer; }
+.suggest li:hover, .suggest li[aria-selected="true"] { background: var(--tint-hi); }
+.sg-name { min-width: 0; overflow-wrap: anywhere; }
+.sg-name mark { background: none; color: var(--gold-hi); font-weight: 600; }
+.sg-house { flex: none; max-width: 45%; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: right; }
+.suggest-none { margin: 0; padding: 12px 14px; font-size: 0.9rem; color: var(--muted); }
+
+.filters-btn { display: inline-flex; align-items: center; gap: 9px; padding: 0 20px; border: 1px solid var(--line-soft); border-radius: 999px; background: var(--surface); color: var(--text); font-size: 0.92rem; letter-spacing: 0.03em; white-space: nowrap; transition: border-color .2s, background .2s; }
+.filters-btn svg { width: 18px; height: 18px; flex: none; }
+.filters-btn:hover, .filters-btn[aria-expanded="true"] { border-color: var(--gold); }
+.filters-btn.on { border-color: var(--gold); background: var(--tint-hi); color: var(--gold-hi); }
+/* "Find my scent" quiz button, next to Filters (on a phone it takes its own full-width row, with the longer wording) */
+.quiz-btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 0 20px; border: 1px solid var(--gold-lo); border-radius: 999px; background: var(--tint); color: var(--gold-hi); font-size: 0.92rem; letter-spacing: 0.03em; white-space: nowrap; transition: border-color .2s, background .2s; }
+.quiz-btn svg { width: 18px; height: 18px; flex: none; }
+.quiz-btn:hover { border-color: var(--gold); background: var(--tint-hi); }
+.quiz-btn .q-long { display: none; }
+.quiz-btn .nb { white-space: nowrap; }
+.badge { display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--gold-fill); color: var(--on-gold); font-size: 0.72rem; font-weight: 600; }
+.badge[hidden] { display: none; }
+
+/* the four style tabs: one joined pill, one gold segment */
+.seg { display: inline-flex; justify-self: start; gap: 2px; padding: 3px; max-width: 100%; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+.seg button { flex: none; min-height: 38px; padding: 0 18px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); font-size: 0.9rem; letter-spacing: 0.03em; white-space: nowrap; transition: color .2s, background .2s; }
+.seg button:hover { color: var(--gold-hi); }
+.seg button[aria-pressed="true"] { background: var(--gold-fill); color: var(--on-gold); font-weight: 500; }
+.seg .short { display: none; }   /* shorter names on phones — see Responsive */
+
+/* the results line: how many · what's chosen · clear · sort */
+.result-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 14px; min-height: 40px; }
+.count { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.result-row .text-btn { font-size: 0.85rem; }
+.ftags { display: flex; flex-wrap: wrap; gap: 8px; }
+.ftag { display: inline-flex; align-items: center; gap: 4px; padding: 3px 4px 3px 13px; border: 1px solid var(--gold); border-radius: 999px; background: var(--tint-hi); color: var(--gold-hi); font-size: 0.82rem; }
+.ftag button { width: 24px; height: 24px; border: 0; border-radius: 50%; background: transparent; color: inherit; font-size: 1rem; line-height: 1; }
+.ftag button:hover { background: var(--tint); }
+.sort { position: relative; display: inline-flex; align-items: center; gap: 6px; margin-left: auto; padding: 0 12px 0 15px; border: 1px solid var(--field-line); border-radius: 999px; background: var(--surface); font-size: 0.85rem; color: var(--muted); transition: border-color .2s; }
+.sort:hover, .sort:focus-within { border-color: var(--gold); }
+.sort select { appearance: none; -webkit-appearance: none; min-height: 38px; padding: 0 20px 0 2px; border: 0; border-radius: 0; background: transparent; color: var(--gold-hi); font-size: 0.88rem; font-weight: 500; }
+.sort select:hover, .sort select:focus { border: 0; }
+.sort select:focus-visible { outline: none; }   /* the ring goes round the whole pill instead (below), not round the bare select inside it */
+.sort:has(select:focus-visible) { outline: 2px solid var(--gold-hi); outline-offset: 3px; }
+.sort::after { content: ""; position: absolute; right: 14px; top: 50%; width: 6px; height: 6px; border-right: 1.5px solid var(--gold); border-bottom: 1.5px solid var(--gold); rotate: 45deg; translate: 0 -75%; pointer-events: none; }
+
+/* ---------- The Filters panel: a card under the button on computers, a bottom sheet on phones ---------- */
+.sheet-back { position: fixed; inset: 0; z-index: 55; }
+/* (on computers its top / right / max-height are set from the Filters button's position when it opens, so the card always fits the window) */
+.sheet { position: fixed; z-index: 60; top: 80px; right: 16px; width: min(560px, calc(100vw - 32px)); display: flex; flex-direction: column; max-height: calc(100vh - 96px); border: 1px solid var(--line); border-radius: 18px; background: var(--bg-2); box-shadow: 0 26px 50px -22px var(--shadow); }
+.sheet[hidden], .sheet-back[hidden] { display: none; }
+.sheet-head { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 14px 4px 22px; }
+.sheet-head h2 { font-size: 1.5rem; font-weight: 600; }
+.sheet-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 8px 22px 6px; }
+.sheet-foot { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 22px; border-top: 1px solid var(--line-soft); }
+.sheet-foot .btn { padding: 11px 22px; }
+.pn-group { margin: 0 0 16px; padding: 0; border: 0; min-width: 0; }
+.pn-group legend { margin-bottom: 8px; padding: 0; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.pn-group select { width: 100%; min-height: 44px; font-size: 0.95rem; text-overflow: ellipsis; }
+.pn-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.pn-chip { display: inline-flex; align-items: center; gap: 6px; min-height: 38px; padding: 0 14px; border: 1px solid var(--line-soft); border-radius: 999px; background: transparent; color: var(--text); font-size: 0.86rem; transition: border-color .2s, background .2s; }
+.pn-chip small { color: var(--muted); font-size: 0.8rem; }
+.pn-chip:hover:not(:disabled) { border-color: var(--gold); }
+.pn-chip[aria-pressed="true"] { border-color: var(--gold); background: var(--tint-hi); color: var(--gold-hi); }
+.pn-chip:disabled { color: var(--faint); cursor: default; }
+
+/* the buttons in the "nothing matches" help */
+.chip { padding: 9px 20px; border-radius: 999px; border: 1px solid var(--line-soft); background: transparent; font-size: 0.9rem; letter-spacing: 0.03em; color: var(--muted); transition: all .2s; }
+.chip:hover { color: var(--gold-hi); border-color: var(--line); }
+
+/* ---------- Catalogue grid ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 18px; }
+.js .grid:empty { min-height: 100vh; min-height: 100dvh; }   /* until the cards are drawn, hold the space so the footer does not sit mid-screen and then jump down (only when scripts run: with scripts off the "please enable JavaScript" note must stay in view) */
+.card { display: flex; flex-direction: column; padding: 18px; background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--radius); transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; animation: rise .45s ease both; }
+.card:hover { transform: translateY(-3px); border-color: var(--line); box-shadow: 0 22px 40px -28px var(--shadow); }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+
+.head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 12px; }
+.head-text { min-width: 0; flex: 1; }
+.thumb { position: relative; flex: 0 0 68px; width: 68px; height: 68px; display: grid; place-items: center; padding-bottom: 12px; border-radius: 12px; border: 1px solid var(--line-soft); background: radial-gradient(80% 80% at 50% 55%, var(--tint-hi), transparent 75%), var(--surface-2); overflow: hidden; }
+.btl { color: var(--gold); opacity: 0.9; display: block; }
+.thumb .ml { position: absolute; bottom: 4px; left: 0; right: 0; text-align: center; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--gold); }
+.thumb .ml-sm { font-size: 9px; letter-spacing: 0.02em; }
+.thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .25s; }
+.thumb img.ok { opacity: 1; }
+.thumb:has(img.ok) { cursor: zoom-in; padding-bottom: 0; }
+.thumb:has(img.ok) .btl, .thumb:has(img.ok) .ml { display: none; }
+/* "Mini" tag along the bottom of the picture when the chosen size is a mini but the photo shown is the full-size bottle */
+.thumb .mini-badge { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding: 2px 0; text-align: center; font-size: 10px; line-height: 1.2; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: var(--gold-fill); color: var(--on-gold); pointer-events: none; }
+.thumb:has(.mini-badge) .ml { display: none; }
+.qr-art .mini-badge { font-size: 9px; }
+
+/* Back to top (appears after scrolling a screen and a half) */
+.to-top { position: fixed; right: 24px; bottom: 92px; z-index: 44; display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
+.to-top[hidden] { display: none; }
+.to-top svg { width: 22px; height: 22px; }
+.to-top:hover { border-color: var(--gold); color: var(--gold-hi); }
+.qr-art:has(img.ok) { cursor: default; }   /* the quiz results don't open the photo viewer */
+
+.house { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.card .name { font-size: 1.35rem; line-height: 1.12; font-weight: 600; overflow-wrap: anywhere; }
+/* the name opens the perfume's own page; the padding makes it a 44px target without moving anything (the negative margin cancels it) */
+.card .name a { display: inline-block; padding-block: 11px; margin-block: -11px; color: inherit; text-decoration: none; }
+.card .name a:hover, .card .name a:focus-visible { color: var(--gold-hi); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+.echo-line { padding: 9px 0; margin-bottom: 12px; border-block: 1px solid var(--line-soft); }
+.echo-badge { display: block; margin-bottom: 2px; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rose); }
+.echo-text { display: block; font-family: var(--serif); font-size: 1.05rem; font-weight: 600; line-height: 1.25; }
+
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 12px; }
+.tag { padding: 3px 10px; border: 1px solid var(--line-soft); border-radius: 999px; font-size: 0.72rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); line-height: 1.5; }
+.tag.pkg { border-color: var(--line); color: var(--gold-hi); }
+.tag.save { border-color: var(--rose-line); color: var(--rose); }
+.save-slot { display: contents; }
+.variants { display: flex; flex-wrap: wrap; gap: 6px; }
+.vchip { padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line-soft); background: transparent; color: var(--muted); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; transition: all .2s; }
+.vchip:hover { border-color: var(--gold); color: var(--gold-hi); }
+.vchip.on { background: var(--tint-hi); border-color: var(--gold); color: var(--gold-hi); }
+.note { margin-bottom: 12px; font-size: 0.8rem; font-style: italic; line-height: 1.4; color: var(--muted); }
+.note:empty { display: none; }
+
+.card-foot { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 12px; }
+.price { display: flex; flex-direction: column; font-family: var(--serif); font-size: 1.7rem; font-weight: 600; line-height: 1.05; color: var(--gold-hi); }
+.price s { font-family: var(--sans); font-size: 0.78rem; font-weight: 400; color: var(--muted); text-decoration-color: var(--rose); }
+.acts { display: flex; align-items: center; gap: 8px; }
+.add { width: 40px; height: 40px; flex: none; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line); background: transparent; color: var(--gold-hi); font-size: 1.2rem; line-height: 1; transition: all .2s; }
+.add:hover { border-color: var(--gold); background: var(--tint); }
+.add.in { background: var(--gold-fill); border-color: var(--gold-fill); color: var(--on-gold); font-size: 0.95rem; font-weight: 600; }
+.order { display: inline-flex; align-items: center; gap: 7px; padding: 10px 16px; border-radius: 999px; background: linear-gradient(135deg, var(--gold-fill-hi), var(--gold-fill) 55%, var(--gold-fill-lo)); color: var(--on-gold); text-decoration: none; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: box-shadow .2s; }
+.order:hover { box-shadow: 0 8px 22px -8px rgba(212, 175, 106, 0.8); }
+.order svg { flex: none; width: 15px; height: 15px; fill: currentColor; }
+
+.empty { grid-column: 1 / -1; text-align: center; padding: 56px 16px; color: var(--muted); }
+.empty h2 { font-size: 1.8rem; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.empty a { color: var(--gold-hi); }
+.empty p + p, .empty-fixes + p { margin-top: 14px; }
+.empty-fixes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
+.empty-fixes .chip span { margin-left: 6px; color: var(--gold); }
+
+.pager { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; padding-top: 36px; }
+.pg { min-width: 40px; padding: 9px 13px; border-radius: 10px; border: 1px solid var(--line-soft); background: var(--surface); color: var(--text); font-size: 0.85rem; font-weight: 500; transition: all .2s; }
+.pg:hover:not(:disabled) { border-color: var(--gold); color: var(--gold-hi); }
+.pg.on { background: var(--gold-fill); border-color: var(--gold-fill); color: var(--on-gold); }
+.pg:disabled { opacity: 0.35; cursor: default; }
+.pg-gap { color: var(--muted); padding: 0 2px; }
+
+.more-note { text-align: center; margin-top: 40px; color: var(--muted); }
+.more-note a { color: var(--gold-hi); }
+
+/* ---------- Quiz & photo viewer ---------- */
+.modal { position: fixed; inset: 0; z-index: 80; display: flex; padding: 12px; background: var(--scrim-hi); backdrop-filter: blur(3px); }
+.modal-card { --pt: 30px; --px: 28px; position: relative; width: min(100%, 32.5rem); margin: auto; max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); overflow-y: auto; overscroll-behavior: contain; padding: var(--pt) var(--px) 26px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 30px 70px -24px var(--shadow); transition: width .25s ease; }
+.modal-card.wide { width: min(100%, 48.75rem); }
+/* the close button stays in view while the card scrolls */
+.modal-x { position: sticky; top: 12px; float: right; z-index: 3; margin: calc(12px - var(--pt)) calc(12px - var(--px)) 0 12px; background: var(--bg-2); }
+.quiz-steps { display: flex; gap: 6px; margin-bottom: 20px; }
+.quiz-steps span { flex: 1; height: 3px; border-radius: 2px; background: var(--line-soft); transition: background .3s; }
+.quiz-steps span.on { background: var(--gold); }
+.quiz-count { margin-bottom: 12px; font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.quiz-count b { margin-right: 6px; font-family: var(--serif); font-size: 1.6rem; font-weight: 600; letter-spacing: 0; color: var(--gold-hi); vertical-align: -3px; }
+.quiz-q { font-size: clamp(1.6rem, 4vw, 1.95rem); font-weight: 600; line-height: 1.15; margin-bottom: 8px; }
+.quiz-q:focus { outline: none; }
+.quiz-sub { font-size: 0.9rem; color: var(--muted); margin-bottom: 18px; }
+.quiz-sub b { color: var(--gold-hi); font-weight: 500; }
+.quiz-opts { display: grid; gap: 9px; }
+.quiz-opt { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 13px 16px; text-align: left; border: 1px solid var(--line-soft); border-radius: 12px; background: var(--surface); font-size: 0.95rem; transition: all .2s; }
+.quiz-opt:hover { border-color: var(--gold); background: var(--tint); }
+.quiz-opt.on { border-color: var(--gold); background: var(--tint-hi); }
+.qo-main { display: grid; gap: 2px; min-width: 0; }
+.qo-label { font-weight: 500; }
+.qo-hint { font-size: 0.8rem; color: var(--muted); }
+.qo-n { flex: none; min-width: 2.4ch; text-align: right; font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: var(--gold); }
+.quiz-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 20px; }
+.quiz-nav .text-btn { font-size: 0.85rem; color: var(--muted); }
+.quiz-nav .quiz-skip { color: var(--gold-hi); text-align: right; }
+.quiz-summary { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+
+.qr-list { display: grid; gap: 12px; margin-bottom: 22px; }
+.qr { display: grid; grid-template-columns: 68px 1fr auto; gap: 14px; align-items: start; padding: 14px; border: 1px solid var(--line-soft); border-radius: 14px; background: var(--surface); }
+.qr-name { font-size: 1.3rem; font-weight: 600; line-height: 1.15; overflow-wrap: anywhere; }
+.qr-insp { margin-top: 4px; font-family: var(--serif); font-size: 1rem; color: var(--text); }
+.qr-spec { margin-top: 4px; font-size: 0.8rem; letter-spacing: 0.04em; color: var(--muted); }
+.qr-side { display: grid; gap: 8px; justify-items: end; text-align: right; }
+.qr-side .price { font-size: 1.5rem; }
+.qr-view { white-space: nowrap; font-size: 0.85rem; }
+.quiz-end { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+
+.lightbox { position: fixed; inset: 0; z-index: 90; display: grid; place-items: center; padding: 24px; background: rgba(0, 0, 0, 0.9); cursor: zoom-out; text-align: center; }
+.lightbox img { max-width: min(560px, 92vw); max-height: 76vh; object-fit: contain; border-radius: 8px; }
+.lightbox figcaption { margin-top: 14px; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-fill-hi); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .grid { gap: 14px; }
+  .search input { padding-left: 44px; }
+  .suggest li { flex-direction: column; align-items: flex-start; justify-content: center; gap: 1px; padding-block: 9px; }   /* house sits under the name, so neither wraps awkwardly */
+  .sg-house { max-width: 100%; text-align: left; }
+  .filters-btn { padding: 0 16px; }
+  .ctl-bar { grid-template-columns: minmax(0, 1fr) auto; }
+  .quiz-btn { grid-column: 1 / -1; min-height: 48px; padding: 10px 16px; white-space: normal; text-align: center; line-height: 1.25; }
+  .quiz-btn .q-short { display: none; }
+  .quiz-btn .q-long { display: inline; }
+  .to-top { right: auto; left: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); }
+  body.has-cart-bar .to-top { bottom: calc(var(--bar-h) + 16px + env(safe-area-inset-bottom)); }
+  /* a shorter heading block, so the search box and the first perfumes come into view sooner */
+  .page-head-cat { padding-top: 24px; }
+  .page-head-cat .eyebrow { margin-bottom: 6px; }
+  .page-head-cat h1 { font-size: clamp(1.9rem, 8.4vw, 2.4rem); }
+  .page-head-cat .section-sub { margin-top: 8px; font-size: 1rem; }
+  .page-head-cat + .section-tight { padding-top: 16px; }
+  /* four tabs share the full width, with the shorter names */
+  .seg { display: grid; grid-template-columns: repeat(4, auto); justify-self: stretch; width: 100%; }
+  .seg button { min-width: 44px; padding: 0 4px; font-size: 0.82rem; }   /* "All" is short — keep it a 44px tap target */
+  .seg .long { display: none; }
+  .seg .short { display: inline; }
+  /* the panel becomes a bottom sheet over a dim backdrop */
+  .sheet-back { background: var(--scrim); }
+  .sheet { top: auto; left: 0; right: 0; bottom: 0; width: 100%; max-height: 86vh; max-height: 86dvh; border-width: 1px 0 0; border-radius: 20px 20px 0 0; animation: sheet-up .28s ease both; }
+  .sheet-head { padding: 12px 12px 2px 18px; }
+  .sheet-body { padding-inline: 18px; }
+  .sheet-foot { padding: 14px 18px max(14px, env(safe-area-inset-bottom)); }
+}
+@keyframes sheet-up { from { transform: translateY(40px); opacity: 0; } }
+
+@media (max-width: 560px) {
+  .modal-card { --pt: 26px; --px: 18px; }
+  .qr { grid-template-columns: 68px 1fr; }
+  .qr-side { grid-column: 1 / -1; grid-template-columns: 1fr auto; align-items: center; justify-items: start; text-align: left; }
+  .qr-side .acts { justify-self: end; }
+  .qr-side .qr-view { grid-column: 1 / -1; }
+  .quiz-end .btn { flex: 1 1 100%; }
+}
+
+@media (max-width: 480px) {
+  .modal-card { --px: 20px; }
+}
+
+/* Very small phones: price above the buttons, so a result card never runs out of room */
+@media (max-width: 400px) {
+  .qr-side { grid-template-columns: 1fr; }
+  .qr-side .acts { justify-self: start; }
+}
+
+/* Touch screens: comfortable tap targets (and 16px dropdown text, so iPhones don't zoom in on tap) */
+@media (pointer: coarse), (max-width: 1100px) {
+  .add { width: 44px; height: 44px; }
+  .order { min-height: 44px; padding-inline: 18px; }
+  .chip { min-height: 44px; }
+  .seg button { min-height: 44px; }
+  .filters-btn, .quiz-btn { min-height: 48px; }
+  .pn-chip { min-height: 44px; }
+  .ftag button { width: 32px; height: 32px; margin-block: -4px; }
+  .search-x { width: 36px; height: 36px; }
+  .sort select { min-height: 44px; font-size: 1rem; }
+  .pn-group select { font-size: 1rem; }
+  .vchip { min-height: 40px; padding-inline: 14px; }
+  .pg { min-width: 44px; min-height: 44px; }
+}
+
+/* Touch screens have no hover, so don't leave a card "lifted" after a tap */
+@media (hover: none) {
+  .card:hover { transform: none; border-color: var(--line-soft); box-shadow: none; }
+}
+
+/* Phones turned sideways */
+@media (max-height: 500px) {
+  .modal-card { --pt: 22px; }
+  .quiz-q { font-size: 1.5rem; }
+  .quiz-sub { margin-bottom: 12px; }
+}

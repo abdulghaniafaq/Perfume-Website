@@ -1,0 +1,24 @@
+/* ==========================================================================
+   PERFUMES — the plain-text list of every perfume (perfumes.html). Loaded after site.css.
+   ========================================================================== */
+.house-jump { margin: 28px 0 8px; }
+.house-jump ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.house-jump a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid var(--line-soft); border-radius: 999px; background: var(--surface); color: var(--text); font-size: 0.92rem; text-decoration: none; transition: border-color .2s, background .2s; }
+.house-jump a:hover { border-color: var(--gold); background: var(--surface-2); color: var(--gold-hi); }
+
+.houses { margin-top: 16px; }
+.house { padding: clamp(22px, 3vw, 34px) 0; border-top: 1px solid var(--line-soft); scroll-margin-top: calc(var(--header-h) + 8px); }
+.house h2 { margin: 0 0 6px; font-size: clamp(1.7rem, 3vw, 2.2rem); }
+.house-meta { margin: 0 0 14px; color: var(--muted); font-size: 0.92rem; letter-spacing: 0.03em; }
+.house-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--gold-hi); }
+.plist { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.plist li { padding-left: 1.2rem; position: relative; color: var(--muted); line-height: 1.55; text-wrap: pretty; }
+.plist li::before { content: ""; position: absolute; left: 2px; top: 0.7em; width: 5px; height: 5px; background: var(--gold-lo); transform: rotate(45deg); }
+.plist .pl { color: var(--text); font-weight: 500; text-underline-offset: 3px; }
+.plist .pl:hover { color: var(--gold-hi); }
+.plist .pd { color: var(--muted); }
+
+@media (max-width: 760px) {
+  .house-jump ul { gap: 6px; }
+  .house-jump a { padding: 0 14px; }
+}

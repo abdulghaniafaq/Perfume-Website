@@ -1,0 +1,47 @@
+# Perfume X Collections: crawlers are welcome, including the ones behind AI search and AI assistants.
+
+User-agent: *
+Allow: /
+
+# AI search and answer engines: these fetch pages so the shop can be found and cited in answers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# AI model-training crawlers: allowed. To opt out of training but stay in AI search, change "Allow: /" to "Disallow: /" under these four.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://perfume-x-collections.netlify.app/sitemap.xml

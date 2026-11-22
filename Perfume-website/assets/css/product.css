@@ -1,0 +1,107 @@
+/* ==========================================================================
+   PERFUME PAGES (perfume-<name>.html). Loaded after site.css.
+   ========================================================================== */
+.sicon { --fig-line: var(--gold); --fig-hi: var(--gold-hi); }
+.sicon .ln { fill: none; stroke: var(--fig-line); stroke-linecap: round; stroke-linejoin: round; }
+.sicon .hi { fill: var(--fig-hi); stroke: none; }
+
+.p-grid { display: grid; grid-template-columns: minmax(0, 440px) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; padding-block: 10px 36px; }
+.p-media { position: sticky; top: calc(var(--header-h) + 16px); }
+.p-photo { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: #fff; }
+.p-photo img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; background: #fff; }
+.p-photo figcaption { padding: 12px 16px; border-top: 1px solid var(--line-soft); background: var(--surface); color: var(--muted); font-size: 0.86rem; line-height: 1.5; }
+.p-main h1 { font-size: clamp(2.1rem, 4.6vw, 3.2rem); font-weight: 500; line-height: 1.08; text-wrap: balance; }
+.p-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
+.p-tags li { padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--tint-faint); color: var(--text); font-size: 0.88rem; }
+
+.p-sec { margin-top: 38px; }
+.p-sec h2 { margin-bottom: 14px; font-size: clamp(1.6rem, 2.8vw, 2.1rem); scroll-margin-top: calc(var(--header-h) + 16px); }
+.p-sec p { color: var(--text); text-wrap: pretty; }
+.p-sec p + p { margin-top: 12px; }
+.p-sec h3 { margin: 22px 0 8px; font-family: var(--serif); font-size: 1.35rem; font-weight: 600; line-height: 1.2; color: var(--text); }
+.p-sec .fine { margin-top: 14px; color: var(--muted); font-size: 0.9rem; }
+.p-sec a { color: var(--gold-hi); text-underline-offset: 3px; }
+.p-sec a.btn { text-decoration: none; }
+.p-sec a.btn-gold { color: var(--on-gold); }
+.p-sec a.btn-ghost { color: var(--gold-hi); }
+.p-main .p-sec:first-of-type { margin-top: 28px; }
+.p-body { padding-bottom: 28px; }
+
+/* sizes and prices */
+.sizes { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.size { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px 16px; padding: 16px 18px; border: 1px solid var(--line-soft); border-radius: var(--radius); background: var(--surface); }
+.size-info p { margin: 0; }
+.size-info p + p { margin-top: 4px; }
+.size .size-name { font-weight: 500; color: var(--text); }
+.size .size-meta { color: var(--muted); font-size: 0.88rem; }
+.size .size-save { color: var(--rose); font-size: 0.9rem; font-weight: 500; }
+.size .size-what { color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
+.size .size-price { margin: 0; align-self: start; font-family: var(--serif); font-size: 1.8rem; font-weight: 600; line-height: 1.1; color: var(--gold-hi); text-align: right; }
+.size-price s { margin-right: 6px; font-size: 1rem; font-weight: 500; color: var(--rose); }
+.size-acts { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px; }
+.p-add { min-width: 44px; min-height: 44px; padding: 0 22px; border: 1px solid var(--gold); border-radius: 999px; background: transparent; color: var(--gold-hi); font-size: 0.95rem; font-weight: 500; letter-spacing: 0.04em; transition: background .2s; }
+.p-add:hover { background: var(--tint); }
+.p-add.in { background: var(--tint-hi); }
+
+/* when to wear it */
+.seasons { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 10px; margin: 6px 0 18px; padding: 0; list-style: none; }
+.seasons li { display: grid; justify-items: center; align-content: start; gap: 4px; padding: 12px 6px; border: 1px solid var(--line-soft); border-radius: 14px; background: var(--surface); text-align: center; }
+.seasons .sicon { width: 34px; height: 34px; }
+.s-name { font-weight: 500; color: var(--text); }
+.s-fit { font-size: 0.8rem; letter-spacing: 0.06em; color: var(--muted); }
+.seasons .s-best { border: 2px solid var(--gold); background: var(--tint-hi); padding: 11px 5px; }
+.seasons .s-best .s-fit { font-weight: 600; color: var(--gold-hi); }
+.seasons .s-ok { border-color: var(--line); }
+.seasons .s-less { border-style: dashed; }
+.wear, .pf, .notes { display: grid; margin: 0; padding: 0; }
+.wear > div, .pf > div, .notes > div { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 4px 16px; padding: 12px 0; border-top: 1px solid var(--line-soft); }
+.wear > div:last-child, .pf > div:last-child, .notes > div:last-child { border-bottom: 1px solid var(--line-soft); }
+.wear dt, .pf dt, .notes dt { padding-top: 0.2em; font-size: 0.76rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
+.wear dd, .pf dd, .notes dd { margin: 0; color: var(--text); }
+.pf dd a { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; margin-block: -10px; }
+.notes dd { font-family: var(--serif); font-size: 1.25rem; line-height: 1.4; }
+.pf dd p { margin: 0; }
+.pf dd p + p { margin-top: 8px; }
+.line { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; margin: 0; padding: 0; list-style: none; }   /* (one full-width column: without it the column could shrink to a few pixels and the names wrapped letter by letter) */
+.line li { display: flex; flex-wrap: wrap; align-items: center; gap: 0 14px; min-width: 0; overflow-wrap: anywhere; }
+.line a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 500; }
+.pf .line a { margin-block: 0; }   /* (the glance list pulls its links up by 10px; here each link is a whole 44px row of its own) */
+.line span { color: var(--muted); font-size: 0.9rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.chips li { padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--tint-faint); color: var(--text); font-size: 0.9rem; }
+
+/* other perfumes */
+.rel { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 10.3rem), 1fr)); gap: 14px; margin: 0 0 6px; padding: 0; list-style: none; }
+.rel-tile { display: flex; flex-direction: column; height: 100%; overflow: hidden; border: 1px solid var(--line-soft); border-radius: 14px; background: var(--surface); color: var(--text); text-decoration: none; transition: border-color .2s, transform .2s; }
+.rel-tile:hover, .rel-tile:focus-visible { border-color: var(--gold); transform: translateY(-2px); }
+.rel-img { display: block; aspect-ratio: 1; background: #fff; }
+.rel-img img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.rel-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; padding: 10px 12px 12px; overflow-wrap: anywhere; }   /* (anywhere: at 200% text a long name wraps instead of being cut off) */
+.rel-house { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
+.rel-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; line-height: 1.15; }
+.rel-from { margin-top: 4px; font-size: 0.82rem; color: var(--muted); }
+.related-title { margin: 28px 0 16px; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.related-title:first-child { margin-top: 0; }
+.more-link { margin-top: 10px; }
+.more-link a { display: inline-flex; align-items: center; min-height: 44px; color: var(--gold-hi); font-weight: 500; }
+
+@media (max-width: 900px) {
+  .p-grid { grid-template-columns: minmax(0, 1fr); }
+  .p-media { position: static; width: min(100%, 420px); margin-inline: auto; }
+}
+@media (max-width: 560px) {
+  .size { grid-template-columns: minmax(0, 1fr); }
+  .size .size-price { text-align: left; }
+  .wear > div, .pf > div, .notes > div { grid-template-columns: minmax(0, 1fr); }
+  .rel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rel-tile, .p-add { transition: none; }
+  .rel-tile:hover { transform: none; }
+}
+@media print {
+  .size-acts { display: none; }
+  .p-grid { grid-template-columns: minmax(0, 1fr); }
+  .p-media { position: static; width: min(100%, 300px); }
+  .seasons .s-best { border-color: #000; }
+}

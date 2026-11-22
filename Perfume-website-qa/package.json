@@ -1,0 +1,13 @@
+{
+  "name": "perfume-website-qa",
+  "private": true,
+  "type": "module",
+  "description": "Automated QA for the Perfume X Collections catalogue filters (kept outside the site folder so it is never deployed).",
+  "scripts": {
+    "test": "node --test --test-concurrency=1 --test-reporter=spec"
+  },
+  "devDependencies": {
+    "axe-core": "^4.10.2",
+    "playwright-core": "1.49.1"
+  }
+}

@@ -1,0 +1,934 @@
+{
+ "afnan-9am": {
+  "notes": {
+   "top": [
+    "mandarin",
+    "cardamom",
+    "pink pepper"
+   ],
+   "heart": [
+    "lavender",
+    "orange blossom",
+    "rose",
+    "apple"
+   ],
+   "base": [
+    "cedarwood",
+    "oakmoss",
+    "patchouli",
+    "musk"
+   ]
+  },
+  "sources": [
+   "https://www.scento.com/perfume-database/perfumes/afnan-9-am",
+   "https://www.bjutip.com/afnan-9-am-yellow-edp-u-100-ml",
+   "https://afnan.com/products/9-am"
+  ],
+  "confidence": "medium",
+  "remarks": "Original Afnan 9AM EDP; citrus tops vary between sources and were left out."
+ },
+ "afnan-9pm": {
+  "notes": {
+   "top": [
+    "bergamot",
+    "lavender",
+    "cinnamon",
+    "apple"
+   ],
+   "heart": [
+    "orange blossom",
+    "lily of the valley"
+   ],
+   "base": [
+    "patchouli",
+    "amber",
+    "vanilla",
+    "tonka bean"
+   ]
+  },
+  "sources": [
+   "https://www.scento.com/perfume-database/perfumes/afnan-9-pm",
+   "https://www.bjutip.com/men-eau-de-parfum/afnan-9-pm-pour-homme-edp-m-100-ml",
+   "https://afnan.com/products/9-pm",
+   "https://www.fragrantica.com/perfume/Afnan/9pm-65414.html"
+  ],
+  "confidence": "high",
+  "remarks": "Original men's Afnan 9PM EDP."
+ },
+ "afnan-mystique-bouquet": {
+  "notes": {
+   "top": [
+    "white peach",
+    "mandarin orange",
+    "bergamot",
+    "lychee"
+   ],
+   "heart": [
+    "orange blossom",
+    "peony",
+    "vetiver",
+    "mahonia"
+   ],
+   "base": [
+    "ambroxan",
+    "musk",
+    "vanilla",
+    "oakmoss"
+   ]
+  },
+  "sources": [
+   "https://www.scento.com/perfumes/mystique-bouquet-afnan",
+   "https://bjutip.com/unisex-perfumes/afnan-mystique-bouquet-edp-u-80-ml",
+   "https://lyko.com/en/afnan-perfumes/afnan-mystique-bouquet-edp-u-80-ml"
+  ],
+  "confidence": "high",
+  "remarks": "Afnan Mystique Bouquet EDP's own notes."
+ },
+ "afnan-tribute-blue": {
+  "notes": {
+   "top": [
+    "bergamot",
+    "pimento",
+    "nutmeg"
+   ],
+   "heart": [
+    "cashmere wood",
+    "amber"
+   ],
+   "base": [
+    "vetiver",
+    "incense",
+    "musk"
+   ]
+  },
+  "sources": [
+   "https://www.scento.com/perfume-database/perfumes/afnan-tribute-blue",
+   "https://www.nahdionline.com/en-sa/afnan-tribute-blue-edp-100ml/pdp/103427584",
+   "https://www.bjutip.com/store-catalog/afnan-tribute-blue-edp-u-100-ml"
+  ],
+  "confidence": "high",
+  "remarks": "Afnan Tribute Blue EDP itself."
+ },
+ "al-haramain-amber-oud-gold-edition": {
+  "notes": {
+   "top": [
+    "bergamot",
+    "green notes"
+   ],
+   "heart": [
+    "melon",
+    "pineapple",
+    "amber"
+   ],
+   "base": [
+    "vanilla",
+    "musk",
+    "woody notes"
+   ]
+  },
+  "sources": [
+   "https://www.scento.com/perfume-database/perfumes/al-haramain-amber-oud-gold-edition",
+   "https://theperfumespot.com/amber-oud-gold-edition-by-al-haramain-2-oz-edp-spray-unisex/",
+   "https://www.fragrantica.com/perfume/Al-Haramain-Perfumes/Amber-Oud-Gold-Edition-51816.html",
+   "https://basenotes.com/fragrances/amber-oud-gold-editon-by-al-haramain.26157526"
+  ],
+  "confidence": "high",
+  "remarks": "Standard Gold Edition EDP."
+ },
+ "armaf-club-de-nuit-lionheart-man": {
+  "notes": {
+   "top": [
+    "mint",
+    "lavender"
+   ],
+   "heart": [
+    "vanilla",
+    "benzoin"
+   ],
+   "base": [
+    "honey",
+    "tonka bean",
+    "tobacco"
+   ]
+  },
+  "sources": [
+   "https://armaf.com/products/cdn-lion-heart-man-spr",
+   "https://www.fragrantica.com/perfume/Armaf/Club-De-Nuit-Lionheart-Man-102026.html",
+   "https://www.parfumo.com/Perfumes/Armaf/lionheart-man",
+   "https://www.ozhairandbeauty.com/products/armaf-club-de-nuit-lionheart-edp-100ml"
+  ],
+  "confidence": "high",
+  "remarks": "Club de Nuit Lionheart Man EDP."
+ },
+ "armaf-dunescape": {
+  "notes": {
+   "top": [
+    "lemon",
+    "mandarin",
+    "bergamot",
+    "blood orange",
+    "ginger",
+    "juniper",
+    "sage"
+   ],
+   "heart": [
+    "cashmeran",
+    "ozonic notes",
+    "geranium",
+    "rose",
+    "apple"
+   ],
+   "base": [
+    "amber",
+    "musk",
+    "sandalwood"
+   ]
+  },
+  "sources": [
+   "https://armaf.com/products/dunescape-1",
+   "https://www.scento.com/perfume-database/perfumes/armaf-dunescape",
+   "https://www.bjutip.com/armaf-dunescape-edp-u-100-ml"
+  ],
+  "confidence": "high",
+  "remarks": "Armaf Dunescape EDP."
+ },
+ "bvlgari-man-in-black-edp": {
+  "notes": {
+   "top": [
+    "spices",
+    "rum"
+   ],
+   "heart": [
+    "tuberose",
+    "iris",
+    "leather"
+   ],
+   "base": [
+    "benzoin",
+    "tonka bean",
+    "guaiac wood"
+   ]
+  },
+  "sources": [
+   "https://www.lookfantastic.com/p/bvlgari-man-in-black-eau-de-parfum-100ml/17001581/",
+   "https://www.nahdionline.com/en-sa/bvlgari-man-in-black-eau-de-parfum-for-men-100-ml/pdp/103181377",
+   "https://www.fahsbeauty.com/shop/bvlgari-man-in-black-eau-de-parfum/",
+   "https://www.ozhairandbeauty.com/products/bvlgari-man-in-black-edp-100ml"
+  ],
+  "confidence": "medium",
+  "remarks": "2014 EDP; tobacco in the top left out as it is not on every source."
+ },
+ "carolina-herrera-212-men-nyc-edt": {
+  "notes": {
+   "all": [
+    "lavender",
+    "gardenia",
+    "sandalwood",
+    "musk"
+   ]
+  },
+  "sources": [
+   "https://www.carolinaherrera.com/fr/en/p-fragrance/212-nyc-men",
+   "https://southbeachperfumes.com/blogs/the-fragrance-encyclopedia-by-south-beach-perfumes/212-men-nyc-by-carolina-herrera-notes-longevity-review-complete-guide",
+   "https://www.maxaroma.com/fragrance/men/carolina-herrera-212-men-eau-de-toilette-spray/pid/21108/3"
+  ],
+  "confidence": "medium",
+  "remarks": "Brand lists citrus leaves and cut grass on top; only the notes common to both lists given."
+ },
+ "chanel-bleu-de-chanel-edp": {
+  "notes": {
+   "top": [
+    "lemon",
+    "bergamot",
+    "mint",
+    "grapefruit",
+    "pink pepper"
+   ],
+   "heart": [
+    "ginger",
+    "jasmine",
+    "nutmeg"
+   ],
+   "base": [
+    "incense",
+    "sandalwood",
+    "cedar",
+    "amberwood",
+    "labdanum",
+    "tonka bean"
+   ]
+  },
+  "sources": [
+   "https://www.fragrantica.com/perfume/Chanel/Bleu-de-Chanel-Eau-de-Parfum-25967.html",
+   "https://basenotes.com/fragrances/bleu-de-chanel-eau-de-parfum-by-chanel.26145039",
+   "https://www.nahdionline.com/en-sa/chanel-bleu-de-chanel-eau-de-parfum-for-men-100-ml/pdp/103179699",
+   "https://www.chanel.com/gb/fragrance/p/107370/bleu-de-chanel-eau-de-parfum-spray/"
+  ],
+  "confidence": "medium",
+  "remarks": "Sources disagree on tiers; only notes backed by two sources kept."
+ },
+ "chanel-bleu-de-chanel-edt": {
+  "notes": {
+   "top": [
+    "grapefruit",
+    "lemon",
+    "mint",
+    "pink pepper"
+   ],
+   "heart": [
+    "ginger",
+    "nutmeg",
+    "jasmine"
+   ],
+   "base": [
+    "incense",
+    "vetiver",
+    "cedar",
+    "sandalwood",
+    "patchouli",
+    "labdanum"
+   ]
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bleu_de_Chanel",
+   "https://scentadvice.com/bleu-de-chanel-edt-2010-chanel/",
+   "https://nstperfume.com/2010/05/24/chanel-bleu-de-chanel-new-fragrance/"
+  ],
+  "confidence": "medium",
+  "remarks": "2010 EDT; iso-e-super and white musk left out as not on every source."
+ },
+ "chanel-coco-mademoiselle-edt": {
+  "notes": {
+   "top": [
+    "orange",
+    "bergamot",
+    "grapefruit"
+   ],
+   "heart": [
+    "rose",
+    "jasmine",
+    "lychee"
+   ],
+   "base": [
+    "patchouli",
+    "vetiver",
+    "white musk",
+    "vanilla"
+   ]
+  },
+  "sources": [
+   "https://www.chanel.com/us/fragrance/p/116460/coco-mademoiselle-eau-de-toilette-spray/",
+   "https://olfactoryobsessed.wordpress.com/2011/10/14/chanel-coco-mademoiselle/",
+   "https://vivir.com/article/chanel-coco-mademoiselle-edt-review",
+   "https://www.fragrantica.com/perfume/Chanel/Coco-Mademoiselle-Eau-de-Toilette-612.html"
+  ],
+  "confidence": "medium",
+  "remarks": "EDT only; Chanel's own page names fewer notes."
+ },
+ "gucci-flora-gorgeous-magnolia-edp": {
+  "notes": {
+   "top": [
+    "dewberry",
+    "sweet orange",
+    "coconut"
+   ],
+   "heart": [
+    "magnolia",
+    "jasmine sambac",
+    "lily of the valley",
+    "ylang ylang"
+   ],
+   "base": [
+    "patchouli",
+    "musk",
+    "blond woods"
+   ]
+  },
+  "sources": [
+   "https://www.libertylondon.com/uk/gucci-flora-gorgeous-magnolia-eau-de-parfum-100ml-000808356.html",
+   "https://www.ulta.com/p/flora-gorgeous-magnolia-eau-de-parfum-pimprod2040057",
+   "https://www.scento.com/fr/perfume-database/perfumes/gucci-gucci-flora-gorgeous-magnolia"
+  ],
+  "confidence": "high",
+  "remarks": "Eau de Parfum; full pyramid per Gucci, matches Liberty and Scento."
+ },
+ "gucci-intense-oud-edp": {
+  "notes": {
+   "all": [
+    "frankincense",
+    "oud",
+    "leather",
+    "patchouli"
+   ]
+  },
+  "sources": [
+   "https://www.scento.com/perfume-database/perfumes/gucci-gucci-intense-oud",
+   "https://www.ozhairandbeauty.com/products/gucci-intense-oud-edp-90ml",
+   "https://bloomingdales.ae/gucci-intense-oud-eau-de-parfum-BEA209876759.html",
+   "https://www.fragrantica.com/perfume/Gucci/Intense-Oud-32743.html"
+  ],
+  "confidence": "medium",
+  "remarks": "Sources conflict; only the four common notes given."
+ },
+ "hermes-elixir-des-merveilles-edp": {
+  "notes": {
+   "all": [
+    "candied orange",
+    "benzoin",
+    "patchouli"
+   ]
+  },
+  "sources": [
+   "https://johnlewis.com/hermes-elixir-des-merveilles-eau-de-parfum-refillable-30ml/p109077653",
+   "https://www.lookfantastic.com/hermes-elixir-des-merveilles-eau-de-parfum-30ml/13715543.html",
+   "https://sephora.com/product/elixir-des-merveilles-eau-de-parfum-spray-P446445"
+  ],
+  "confidence": "high",
+  "remarks": "Hermes publishes only these three key notes."
+ },
+ "hermes-h24-edp": {
+  "notes": {
+   "top": [
+    "clary sage"
+   ],
+   "heart": [
+    "oak moss"
+   ],
+   "base": [
+    "sclarene"
+   ]
+  },
+  "sources": [
+   "https://www.spacenk.com/uk/fragrance/personal-fragrance/fragrance/h24-eau-de-parfum-UK200052757.html",
+   "https://www.woolworths.co.za/prod/_/A-506670158",
+   "https://lookfantastic.com/hermes-h24-eau-de-parfum-refillable-natural-spray-30ml/14884242.html"
+  ],
+  "confidence": "high",
+  "remarks": "H24 Eau de Parfum only."
+ },
+ "hermes-terre-dhermes-edt": {
+  "notes": {
+   "top": [
+    "orange",
+    "grapefruit"
+   ],
+   "heart": [
+    "pepper",
+    "pelargonium",
+    "flint"
+   ],
+   "base": [
+    "vetiver",
+    "cedar",
+    "patchouli",
+    "benzoin"
+   ]
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Terre_d%27Herm%C3%A8s",
+   "https://www.fragrantica.com/perfume/Hermes/Terre-d-Hermes-17.html",
+   "https://basenotes.com/fragrances/terre-dhermes-by-hermes.26125219",
+   "https://www.lookfantastic.com/p/hermes-terre-d-hermes-eau-de-toilette-100ml/13715525"
+  ],
+  "confidence": "high",
+  "remarks": "Original Terre d'Hermes EDT."
+ },
+ "lattafa-asad": {
+  "notes": {
+   "top": [
+    "black pepper",
+    "tobacco",
+    "pineapple"
+   ],
+   "heart": [
+    "patchouli",
+    "coffee",
+    "iris"
+   ],
+   "base": [
+    "vanilla",
+    "amber",
+    "dry woods",
+    "benzoin",
+    "labdanum"
+   ]
+  },
+  "sources": [
+   "https://www.ozhairandbeauty.com/products/lattafa-asad-edp-100ml",
+   "https://www.strawberrynet.com/en-SG/lattafa-asad-eau-de-parfum-spray-100ml-3-4oz/361683",
+   "https://www.notino.co.uk/lattafa/asad-eau-de-parfum-for-men/p-16145677"
+  ],
+  "confidence": "high",
+  "remarks": "Plain Lattafa Asad EDP."
+ },
+ "lattafa-fire-on-ice": {
+  "notes": {
+   "top": [
+    "black raspberry",
+    "cinnamon",
+    "cognac"
+   ],
+   "heart": [
+    "frozen rose petals",
+    "caramel",
+    "moss"
+   ],
+   "base": [
+    "oakwood",
+    "myrrh",
+    "cedarwood",
+    "ambroxan"
+   ]
+  },
+  "sources": [
+   "https://www.perfumestars.com/?p=26465",
+   "https://scentadvice.com/fire-on-ice-2025-lattafa/",
+   "https://www.fragrancex.com/products/lattafa/lattafa-fire-on-ice-cologne",
+   "https://www.intenseoud.com/collections/shop-lattafa/products/fire-on-ice-eau-de-parfum-spray-100ml-3-4oz-by-lattafa-where-heat-meets-frost-boldly-unisex"
+  ],
+  "confidence": "high",
+  "remarks": "Notes of Lattafa Fire on Ice EDP itself."
+ },
+ "lattafa-khamrah": {
+  "notes": {
+   "top": [
+    "cinnamon",
+    "nutmeg",
+    "bergamot"
+   ],
+   "heart": [
+    "dates",
+    "praline",
+    "tuberose",
+    "mahonial"
+   ],
+   "base": [
+    "vanilla",
+    "tonka bean",
+    "amberwood",
+    "myrrh",
+    "benzoin",
+    "akigalawood"
+   ]
+  },
+  "sources": [
+   "https://www.scento.com/perfumes/khamrah-lattafa.md",
+   "https://scentapedia.com/perfumes/khamrah",
+   "https://www.ozhairandbeauty.com/products/lattafa-khamrah-edp-100ml",
+   "https://www.olfastory.com/en/perfume/khamrah/composition"
+  ],
+  "confidence": "high",
+  "remarks": "Lattafa Khamrah EDP itself."
+ },
+ "lattafa-liam-grey": {
+  "notes": {
+   "top": [
+    "cardamom",
+    "black tea",
+    "fig"
+   ],
+   "heart": [
+    "iris",
+    "vetiver",
+    "labdanum"
+   ],
+   "base": [
+    "sandalwood",
+    "vanilla",
+    "tonka bean",
+    "patchouli"
+   ]
+  },
+  "sources": [
+   "https://www.scento.com/perfumes/liam-grey-lattafa",
+   "https://lyko.com/en/lattafa/lattafa-liam-grey-edp-u-100-ml",
+   "https://www.sabina.com/en/women-s-perfumes/39823-lattafa-liam-grey-edp-100ml.html"
+  ],
+  "confidence": "high",
+  "remarks": "Lattafa Liam Grey EDP itself."
+ },
+ "lattafa-the-kingdom-man": {
+  "notes": {
+   "top": [
+    "sage",
+    "lavender",
+    "mint"
+   ],
+   "heart": [
+    "tobacco",
+    "vanilla",
+    "orange blossom"
+   ],
+   "base": [
+    "benzoin",
+    "tonka bean",
+    "labdanum"
+   ]
+  },
+  "sources": [
+   "https://lattafa.com/product/kingdom-men/",
+   "https://frencharabianperfume.com/shop/fragrance/for-him/lattafa-the-kingdom-for-men-100ml-eau-de-parfum/",
+   "https://luxurious-fragrances.com/en/product/the-kingdom-for-men/",
+   "https://www.parfumo.com/Perfumes/Lattafa/the-kingdom-for-men"
+  ],
+  "confidence": "high",
+  "remarks": "Lattafa The Kingdom for Men EDP 100 ml."
+ },
+ "maison-alhambra-rose-petals": {
+  "notes": {
+   "all": [
+    "May rose",
+    "Bulgarian rose",
+    "Turkish rose",
+    "saffron",
+    "patchouli",
+    "tonka bean"
+   ]
+  },
+  "sources": [
+   "https://www.fridaycharm.com/collections/unisex-j/products/maison-alhambra-rose-petals-eau-de-parfum-for-unisex",
+   "https://frencharabianperfume.com/shop/fragrance/for-her/rose-petals-80ml-eau-de-parfum-perfume-for-women-by-maison-alhambra-inspired-by-rose-prick-by-tom-ford/",
+   "https://www.fragrancex.com/products/maison-alhambra/maison-alhambra-rose-petals-perfume",
+   "https://www.intenseoud.com/products/rose-petals-edp-80ml-2-7oz-by-maison-alhambra"
+  ],
+  "confidence": "medium",
+  "remarks": "Retailers disagree on the pyramid."
+ },
+ "mancera-red-tobacco-edp": {
+  "notes": {
+   "top": [
+    "saffron",
+    "cinnamon",
+    "incense",
+    "nutmeg",
+    "green apple",
+    "oud"
+   ],
+   "heart": [
+    "patchouli",
+    "jasmine"
+   ],
+   "base": [
+    "tobacco",
+    "amber",
+    "vetiver",
+    "vanilla",
+    "white musk"
+   ]
+  },
+  "sources": [
+   "https://manceraparfums.com/en/unisex/67-red-tobacco.html",
+   "https://www.aromanto.com/en/product/mancera-red-tobacco-eau-de-parfum-120ml/",
+   "https://www.fragrantica.com/perfume/Mancera/Red-Tobacco-46663.html"
+  ],
+  "confidence": "medium",
+  "remarks": "Standard Red Tobacco EDP; disputed notes left out."
+ },
+ "mancera-vanille-exclusive-edp": {
+  "notes": {
+   "top": [
+    "osmanthus",
+    "white peach",
+    "brown sugar",
+    "whipped cream"
+   ],
+   "heart": [
+    "tuberose",
+    "jasmine",
+    "violet"
+   ],
+   "base": [
+    "vanilla",
+    "amber",
+    "sandalwood",
+    "white musk"
+   ]
+  },
+  "sources": [
+   "https://manceraparfums.com/en/women/75-vanille-exclusive.html",
+   "https://www.maxaroma.com/fragrance/unisex/mancera-vanille-exclusive/pid/29448/4",
+   "https://www.fragrantica.com/perfume/Mancera/Vanille-Exclusive-51494.html"
+  ],
+  "confidence": "high",
+  "remarks": "Mancera Vanille Exclusive EDP."
+ },
+ "montale-intense-cafe-edp": {
+  "notes": {
+   "top": [
+    "floral notes"
+   ],
+   "heart": [
+    "rose",
+    "coffee"
+   ],
+   "base": [
+    "amber",
+    "vanilla",
+    "white musk"
+   ]
+  },
+  "sources": [
+   "https://montaleparfums.com/en/roses/176-224-intense-cafe.html",
+   "https://www.fragrantica.com/perfume/Montale/Intense-Cafe-18021.html",
+   "https://harrods.com/en-gb/p/montale-intense-cafe-eau-de-parfum-100ml-000000000006461800",
+   "https://bloomingdales.com/shop/product/montale-intense-cafe-eau-de-parfum?ID=1727732"
+  ],
+  "confidence": "high",
+  "remarks": "Intense Cafe EDP; top note published only as 'floral notes'."
+ },
+ "paco-rabanne-1-million-edt": {
+  "notes": {
+   "top": [
+    "peppermint",
+    "blood mandarin"
+   ],
+   "heart": [
+    "rose",
+    "cinnamon"
+   ],
+   "base": [
+    "leather",
+    "amber"
+   ]
+  },
+  "sources": [
+   "https://www.cosma-parfumeries.com/uk_en/paco-rabanne-1-million-eau-de-toilette.html",
+   "https://www.joybuy.de/blog/paco-rabanne-1-million-edt-200ml/H6LevcJm",
+   "https://www.fragrantica.com/perfume/Rabanne/1-Million-3747.html",
+   "https://www.parfumo.com/Perfumes/Rabanne/1_Million_Eau_de_Toilette"
+  ],
+  "confidence": "medium",
+  "remarks": "EDT; some notes appear in only some sources and were left out."
+ },
+ "paco-rabanne-invictus-edt": {
+  "notes": {
+   "top": [
+    "grapefruit",
+    "marine accord"
+   ],
+   "heart": [
+    "bay leaf"
+   ],
+   "base": [
+    "guaiac wood",
+    "ambergris",
+    "patchouli"
+   ]
+  },
+  "sources": [
+   "https://www.lookfantastic.com/p/paco-rabanne-invictus-eau-de-toilette-100ml/10952559",
+   "https://www.fragrantica.com/perfume/Rabanne/Invictus-18471.html",
+   "https://basenotes.com/fragrances/invictus-by-paco-rabanne.26139765",
+   "https://www.macys.com/shop/product/paco-rabanne-mens-invictus-eau-de-toilette-fragrance-collection?CategoryID=30088&ID=1495376"
+  ],
+  "confidence": "medium",
+  "remarks": "2013 Invictus EDT only; jasmine, mandarin and oakmoss appear on databases but are not on every source, so omitted."
+ },
+ "prada-amber-pour-homme-edt": {
+  "notes": {
+   "top": [
+    "neroli",
+    "cardamom",
+    "bergamot",
+    "mandarin"
+   ],
+   "heart": [
+    "myrrh",
+    "musk",
+    "orange blossom",
+    "geranium",
+    "vetiver"
+   ],
+   "base": [
+    "saffron",
+    "vanilla",
+    "labdanum",
+    "tonka bean",
+    "leather",
+    "sandalwood",
+    "patchouli"
+   ]
+  },
+  "sources": [
+   "https://swissyarn.com/product/prada-amber-pour-homme-eau-de-toilette-for-men-100ml/",
+   "https://www.scentstore.com/product/prada-amber-pour-homme-eau-de-toilette-spray/",
+   "https://www.fragrantica.com/perfume/Prada/Prada-Amber-Pour-Homme-Prada-Man-1044.html",
+   "https://www.parfumo.com/Perfumes/Prada/Amber_pour_Homme_Eau_de_Toilette"
+  ],
+  "confidence": "medium",
+  "remarks": "Original 2006 EDT; tiers differ between retailers."
+ },
+ "prada-luna-rossa-sport-edt": {
+  "notes": {
+   "all": [
+    "ginger",
+    "juniper berry",
+    "lavender",
+    "tonka bean",
+    "vanilla"
+   ]
+  },
+  "sources": [
+   "https://nstperfume.com/2015/03/28/prada-luna-rossa-sport-new-fragrance",
+   "https://www.theperfumegirl.com/perfumes/fragrances/prada/luna-rossa-sport",
+   "https://www.fragrancereview.com/?p=23716"
+  ],
+  "confidence": "medium",
+  "remarks": "Tiers differ between sources; extras excluded."
+ },
+ "rasasi-hawas-og": {
+  "notes": {
+   "top": [
+    "apple",
+    "bergamot",
+    "lemon",
+    "cinnamon"
+   ],
+   "heart": [
+    "watery notes",
+    "plum",
+    "orange blossom",
+    "cardamom"
+   ],
+   "base": [
+    "ambergris",
+    "musk",
+    "patchouli",
+    "driftwood"
+   ]
+  },
+  "sources": [
+   "https://www.scento.com/perfumes/hawas-for-him-rasasi",
+   "https://scentapedia.com/perfumes/hawas-for-him",
+   "https://www.fregranzo.com/fragrance/rasasi/hawas-for-him/",
+   "https://parfoom.com/perfumes/rasasi/hawas-for-him"
+  ],
+  "confidence": "medium",
+  "remarks": "Original 2015 Hawas for Him EDP; 'OG' is retailer slang, identity not confirmed."
+ },
+ "tom-ford-black-orchid-parfum": {
+  "notes": {
+   "top": [
+    "black truffle",
+    "black plum"
+   ],
+   "heart": [
+    "black orchid",
+    "ylang ylang",
+    "rum absolute"
+   ],
+   "base": [
+    "patchouli"
+   ]
+  },
+  "sources": [
+   "https://www.olfastory.com/en/perfume/black-orchid-parfum/composition",
+   "https://scentapedia.com/perfumes/black-orchid-parfum",
+   "https://www.nordstrom.com/s/tom-ford-black-orchid-parfum/5683664"
+  ],
+  "confidence": "high",
+  "remarks": "Black Orchid Parfum only, not the 2006 EDP."
+ },
+ "tom-ford-neroli-portofino-acqua-edt": {
+  "notes": {
+   "top": [
+    "bergamot",
+    "lemon",
+    "petitgrain"
+   ],
+   "heart": [
+    "neroli",
+    "orange blossom"
+   ],
+   "base": [
+    "amberwood",
+    "white musk"
+   ]
+  },
+  "sources": [
+   "https://www.fragrantica.com/perfume/Tom-Ford/Neroli-Portofino-Acqua-32614.html",
+   "https://basenotes.com/fragrances/neroli-portofino-acqua-by-tom-ford.26148487",
+   "https://www.lookfantastic.com/p/tom-ford-neroli-portofino-acqua-travel-spray-10ml/12099599/",
+   "https://www.refinery29.com/en-us/shop/product/neroli-portofino-acqua-eau-de-toilette-10839103"
+  ],
+  "confidence": "medium",
+  "remarks": "Pyramid is for the 2016 Acqua EDT; Tom Ford's untiered list also names mandarin and lavender, left out."
+ },
+ "tom-ford-ombre-leather-parfum": {
+  "notes": {
+   "all": [
+    "violet leaf",
+    "jasmine sambac",
+    "orris",
+    "cedarwood",
+    "green tobacco",
+    "black leather"
+   ]
+  },
+  "sources": [
+   "https://www.woolworths.co.za/prod/A-505791100",
+   "https://bluemercury.com/products/tom-ford-ombre-leather-parfum",
+   "https://www.lookfantastic.com/p/tom-ford-ombre-leather-parfum-50ml/13105875/",
+   "https://www.fragrantica.com/perfume/Tom-Ford/Ombre-Leather-Parfum-68716.html"
+  ],
+  "confidence": "medium",
+  "remarks": "2021 Parfum flanker; conflicting lists excluded."
+ },
+ "versace-dylan-blue-edt": {
+  "notes": {
+   "top": [
+    "bergamot",
+    "grapefruit",
+    "fig leaf",
+    "aquatic notes"
+   ],
+   "heart": [
+    "violet leaf",
+    "black pepper",
+    "papyrus wood",
+    "patchouli",
+    "ambroxan"
+   ],
+   "base": [
+    "musk",
+    "tonka bean",
+    "saffron",
+    "incense"
+   ]
+  },
+  "sources": [
+   "https://www.olfastory.com/en/perfume/dylan-blue",
+   "https://whatscent.app/magazine/versace-pour-homme-dylan-blue-review",
+   "https://johnlewis.com/versace-pour-homme-dylan-blue-eau-de-toilette/p2873490"
+  ],
+  "confidence": "high",
+  "remarks": "Versace Pour Homme Dylan Blue EDT."
+ },
+ "versace-eros-edt": {
+  "notes": {
+   "top": [
+    "mint",
+    "lemon",
+    "green apple"
+   ],
+   "heart": [
+    "tonka bean",
+    "ambroxan",
+    "geranium"
+   ],
+   "base": [
+    "vanilla",
+    "vetiver",
+    "oakmoss",
+    "cedarwood"
+   ]
+  },
+  "sources": [
+   "https://www.lookfantastic.com/p/versace-eros-for-men-eau-de-toilette-50ml/11034084",
+   "https://southbeachperfumes.com/blogs/the-fragrance-encyclopedia-by-south-beach-perfumes/versace-eros-eau-de-toilette-notes-longevity-review-complete-guide",
+   "https://www.scentstore.com/eros-eau-de-toilette-spray/"
+  ],
+  "confidence": "high",
+  "remarks": "Blue Eros EDT for men."
+ }
+}

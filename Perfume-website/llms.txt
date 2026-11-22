@@ -1,0 +1,34 @@
+# Perfume X Collections
+
+> Perfume X Collections is an independent online perfume retailer in India. It sells genuine designer, luxury and Middle-Eastern fragrances at insider prices (627 perfumes from 89 houses, vials from ₹150), takes orders on WhatsApp with no checkout and no account, and refunds three times the price paid if a reputed store confirms in writing that an item is not genuine.
+
+Key facts:
+- Prices are in INR and were last updated November 2026. Stock changes, so availability and the final total are confirmed on WhatsApp before payment.
+- Formats: Retail (a boxed full-size bottle), Tester (the same fragrance in plain packaging, typically 10–30% cheaper than the retail bottle of the same size), and minis, vials and sets. Every listing says exactly what is included.
+- Authenticity guarantee: take the bottle to a reputed perfume store (Sephora, Nykaa, Shoppers Stop or Parcos, or a comparable store) and send us its written report on WhatsApp within 7 days of delivery. The refund is three times the amount paid for that item.
+- Ordering: add perfumes to the cart and send the list on WhatsApp. Payment is made through WhatsApp, never on the website, and we never ask for card details, an OTP or a banking password.
+- Delivery: packing begins within 48 hours of payment confirmation, and orders are generally shipped within 3–4 days, depending on the state in India.
+- Every perfume has its own page (opened from the A–Z list or from the catalogue): sizes and prices in INR, when to wear it by season and time of day (from its scent family and strength), notes where they are verified, and how to order.
+- The shop is not affiliated with or endorsed by any brand it lists.
+
+## Catalogue
+
+- [All perfumes, A–Z by house](https://perfume-x-collections.netlify.app/perfumes.html): every perfume with its sizes, packaging and prices, as plain text
+- [Catalogue](https://perfume-x-collections.netlify.app/catalogue.html): the searchable catalogue with pictures and filters (needs JavaScript)
+
+## Guides
+
+- [All guides](https://perfume-x-collections.netlify.app/guides.html): the four guides on one page
+- [How to tell genuine perfume from a fake](https://perfume-x-collections.netlify.app/guide-spot-genuine-perfume.html): the six spots to check, and the things that look wrong but are not
+- [Which scent for which season](https://perfume-x-collections.netlify.app/guide-perfume-for-every-season.html): fresh, floral, amber and rich perfumes for spring, summer, the monsoon, autumn and winter
+- [Retail, tester, decant or discovery set](https://perfume-x-collections.netlify.app/guide-retail-tester-decant-discovery-set.html): what each format is, what it costs per ml and who it suits
+- [Perfume testers explained](https://perfume-x-collections.netlify.app/guide-perfume-testers-explained.html): why testers cost less, why brands say they are not for sale, and whether they are legit
+
+## Help and policies
+
+- [FAQ](https://perfume-x-collections.netlify.app/faq.html): short answers about authenticity, ordering, payment, delivery and testers
+- [How to order](https://perfume-x-collections.netlify.app/how-to-order.html)
+- [Authenticity guarantee](https://perfume-x-collections.netlify.app/guarantee.html)
+- [Terms of Service](https://perfume-x-collections.netlify.app/terms.html)
+- [Privacy Policy](https://perfume-x-collections.netlify.app/privacy.html)
+- [Contact](https://perfume-x-collections.netlify.app/contact.html)

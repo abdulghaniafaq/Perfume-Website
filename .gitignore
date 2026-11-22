@@ -1,0 +1,4 @@
+# Not needed on GitHub: rebuilt on any computer with `npm install` (inside Perfume-website-qa)
+node_modules/
+# macOS clutter
+.DS_Store

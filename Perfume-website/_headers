@@ -1,0 +1,31 @@
+# Security headers for Netlify (this file is read by Netlify and is never shown to visitors).
+# Everything here is checked by security.test.mjs in the QA folder, which loads every page under these exact rules.
+#
+# This file must never carry a robots header of any kind: that could tell Google and AI search not to list the site.
+
+/*
+  # Only HTTPS, for a year. (No "includeSubDomains" or "preload": those are one-way decisions to take once a custom domain is chosen.)
+  Strict-Transport-Security: max-age=31536000
+
+  # What the pages may load and run. Scripts and styles only from this site (plus the one inline script that sets light/dark before the
+  # page paints, allowed by its fingerprint), fonts only from Google Fonts, pictures from this site, nothing may frame the site, no plug-ins.
+  # If the inline script in the pages is ever edited, its fingerprint changes: security.test.mjs says so and prints the new one.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-EfpnDwL2nzD/0lHdp/j3JslZP5dMsMa6ppG37WAl1oQ='; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+
+  # Browsers must trust the declared file type (a picture can never be run as a script).
+  X-Content-Type-Options: nosniff
+
+  # Nobody can put the site inside their own page (clickjacking). The CSP above says the same for modern browsers.
+  X-Frame-Options: DENY
+
+  # Other sites see only that the visit came from this site, never which page or what was searched.
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Features the site never uses are switched off, so a script that sneaks in could not use them either.
+  Permissions-Policy: accelerometer=(), autoplay=(), bluetooth=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), hid=(), magnetometer=(), microphone=(), midi=(), payment=(), publickey-credentials-get=(), serial=(), usb=(), xr-spatial-tracking=()
+
+  # A window opened by another site cannot reach back into this one (the WhatsApp window the site opens keeps working).
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+
+  # Old Adobe plug-ins may not read data from the site.
+  X-Permitted-Cross-Domain-Policies: none
