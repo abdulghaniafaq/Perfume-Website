@@ -4,6 +4,15 @@
    ========================================================================== */
 
 .contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 34px; }
+/* The contact buttons: same width and height, an icon, a bold line and a smaller line. Side by side on a laptop, stacked on a phone. */
+.contact-actions .btn { flex: 1 1 17rem; max-width: 21rem; min-height: 64px; padding: 12px 24px; gap: 14px; text-align: left; }
+.contact-actions .btn svg { width: 26px; height: 26px; flex: none; }
+.contact-actions .btn-gold svg { fill: currentColor; }
+.contact-actions .btn-ig { border-color: var(--gold); }
+.ca-text { display: grid; gap: 1px; line-height: 1.25; min-width: 0; }
+.ca-main { font-weight: 600; letter-spacing: 0.03em; }
+.ca-sub { font-size: 0.84rem; font-weight: 400; letter-spacing: 0.04em; overflow-wrap: anywhere; }
+.ca-sep { display: none; }
 .restock { max-width: 52ch; margin: 28px auto 0; font-size: 0.92rem; color: var(--muted); }
 .restock a { color: var(--gold-hi); white-space: nowrap; }
 

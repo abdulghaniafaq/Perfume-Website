@@ -39,7 +39,7 @@ Perfume-website/
 
 | To change… | Edit |
 | --- | --- |
-| WhatsApp number, brand name, currency, **the "prices last updated" date (`pricesUpdated`, now November 2026 — shown in every footer, the terms and the FAQ)**, guarantee multiple, accepted audit stores, claim window (days), house groups | `data/site-config.js` |
+| WhatsApp number, **Instagram handle (`contact.instagram`, now `perfume_x_collections`; shown as a button on the Contact page, blank hides it)**, brand name, currency, **the "prices last updated" date (`pricesUpdated`, now November 2026 — shown in every footer, the terms and the FAQ)**, guarantee multiple, accepted audit stores, claim window (days), house groups | `data/site-config.js` |
 | Products and prices | `data/products-data.js` |
 | Colours, fonts, spacing | the `:root` block at the top of `assets/css/site.css` (dark colours) and the `:root[data-theme="light"]` block under it (light colours) |
 | Page wording | the matching `.html` file |

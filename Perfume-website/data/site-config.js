@@ -20,7 +20,7 @@ window.SITE = {
     // How the number is shown on the Contact page: "masked" → +91 ••••• ••272, "hidden" → not shown.
     numberDisplay: "masked",
     // Optional. Leave "" to hide. Instagram is the handle without the "@".
-    instagram: "",
+    instagram: "perfume_x_collections",
     email: ""
   },
 

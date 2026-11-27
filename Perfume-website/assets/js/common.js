@@ -245,8 +245,10 @@
     const { whatsapp, whatsappDisplay, numberDisplay, instagram, email } = S.contact;
     const shown = numberDisplay === "hidden" ? "" : PX.maskPhone(whatsappDisplay);
     const items = [];
-    if (whatsapp) items.push(`<a class="btn btn-gold" href="#" data-wa-open="${esc("Hi! I have a question about your perfumes.")}">Chat on WhatsApp${shown ? ` · ${esc(shown)}` : ""}</a>`);
-    if (instagram) items.push(`<a class="btn btn-ghost" href="https://instagram.com/${esc(instagram)}" target="_blank" rel="noopener">Instagram @${esc(instagram)}</a>`);
+    // Each button = an icon + a bold line + a smaller line. The text still reads "Chat on WhatsApp · <masked number>" (the dot is hidden by CSS on the second line).
+    const IG_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg>';
+    if (whatsapp) items.push(`<a class="btn btn-gold" href="#" data-wa-open="${esc("Hi! I have a question about your perfumes.")}">${WA_ICON}<span class="ca-text"><span class="ca-main">Chat on WhatsApp</span>${shown ? `<span class="ca-sub"><span class="ca-sep"> · </span>${esc(shown)}</span>` : ""}</span></a>`);
+    if (instagram) items.push(`<a class="btn btn-ghost btn-ig" href="https://instagram.com/${esc(instagram)}" target="_blank" rel="noopener">${IG_ICON}<span class="ca-text"><span class="ca-main">Follow us on Instagram</span><span class="ca-sub">@${esc(instagram)}</span></span></a>`);
     if (email) items.push(`<a class="btn btn-ghost" href="mailto:${esc(email)}">${esc(email)}</a>`);
     contactBox.innerHTML = items.join("");
   }

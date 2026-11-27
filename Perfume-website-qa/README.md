@@ -51,7 +51,7 @@ The shop has 627 perfumes from 89 houses. Customers order on WhatsApp. Prices ar
 
 | To change | Edit this |
 | --- | --- |
-| WhatsApp number, brand name, guarantee settings, the list of stores where a perfume can be checked, number of days to make a claim | `Perfume-website/data/site-config.js` |
+| WhatsApp number, **Instagram name** (the Instagram button on the Contact page; now `perfume_x_collections`, leave it empty to hide the button), brand name, guarantee settings, the list of stores where a perfume can be checked, number of days to make a claim | `Perfume-website/data/site-config.js` |
 | Wording on Home, Catalogue, How to order, Guarantee, FAQ, Contact, Privacy or Terms | The matching `.html` file in `Perfume-website` |
 | Colours, fonts and spacing | The top of `Perfume-website/assets/css/site.css` (dark colours first, then light colours under it) |
 | A product photo | Replace both files for that perfume: `assets/images/<name>.jpg` (big) and `assets/images/thumbs/<name>.jpg` (small). Then run `node lib/make-photo-manifest.mjs` so the checks know the change was on purpose |
@@ -201,7 +201,8 @@ More detail is in `seo-build/README.md`.
 - [ ] Two photos are used as your list says but do not look right: Versace Eros EDT (a hand holding a gift box) and Afnan Turathi Pour Homme (a box that says "Supremacy Collector's Edition"). Replace them when you have better ones.
 - [ ] Juicy Couture is currently filed under Elizabeth Arden. Decide if that is what you want.
 - [ ] Adding more perfume notes needs real research with two agreeing sources per perfume.
-- [ ] Optional later: real shop details (who runs it, city, business number, social links) would help Google and AI assistants trust the site. Only add what is true.
+- [x] Your Instagram page (instagram.com/perfume_x_collections) is now linked from the Contact page.
+- [ ] Optional later: more real shop details (who runs it, city, business number) would help Google and AI assistants trust the site. Only add what is true. The Instagram link could also be added to the hidden page information and the footer if you want.
 
 ---
 
